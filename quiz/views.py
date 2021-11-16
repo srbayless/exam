@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from 
+from quiz.forms import patient
 
 
 def RegistrationFormView(request):

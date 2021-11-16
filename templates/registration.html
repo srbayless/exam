@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <patient method = "POST" enctype = multipart/patient-data >
+        {%csrf_token%}{{patient.non_field_errors}} 
+        <div class='parentflex'>
+        <table>
+            <tr> 
+                <td>{{patient.todaysDate}}</td>
+            </tr>
+            <tr>    
+                <td>{{patient.firstName}}</td>
+                <td>{{patient.lastName}}</td>
+            </tr>   
+            <tr>    
+                <td>{{patient.birthdate}}</td>
+                <td>{{patient.age}}</td>
+            </tr>    
+            <tr>   
+                <td>{{patient.address}}</td>
+                <td>{{patient.cistzip}}</td>
+            </tr>    
+            <tr>   
+                <td>{{patient.phoneNumber}}</td>
+            </tr>
+        </table> 
+        </div>
+        <div class='test'>
+        <table>
+        
+       
+            <tr>
+                <th>{{patient.test}}</th>
+                <th>{{patient.todaysDate}}</th>
+                <td>{{patient.patientId}}</td>
+            </tr> 
+               
+        </table> 
+    </div> 
+</body>
+
+<style>
+    .parentflex{
+        display: flex;
+        width: 600px;
+        margin: auto;
+        background-color: aquamarine;
+        height: 300px;
+    }
+    .test{
+        display: flex;
+        width: 600px;
+        background-color: aqua;
+        margin: auto;
+    }
+</style>
