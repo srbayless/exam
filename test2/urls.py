@@ -19,5 +19,5 @@ from quiz.views import RegistrationFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('reg/',RegistrationFormView),
 ]
